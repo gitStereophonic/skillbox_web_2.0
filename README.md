@@ -1,2 +1,2 @@
-# skillbox_web_2.0
-My solutions from skillbox
+# Skillbox web 2.0
+My solutions from skillbox courses. HTML5 + CSS3 + JavaScript 
