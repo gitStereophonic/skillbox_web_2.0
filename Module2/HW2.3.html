@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Заявка на конференцию</title>
+	</head>
+	<body>
+		<h1>Отправка заявки на конференцию</h1>
+		<form>
+			<h2>Основные данные</h2>
+			<label>*&nbsp;Фамилия, имя, отчество:</label>
+			<br><br>
+			<input required="" type="text" size="75" name="userName">
+			<br><br>
+			<label>Дата рождения:</label>
+			<br><br>
+			<input type="date" name="userBirthDate" value="2001-07-01"
+       min="1985-07-01" max="2001-07-01">
+			<br><br>
+			<label>Пол:</label>
+			<br><br>
+			<input id="userGenderMale" type="radio" name="userGender">&nbsp;<label for="userGenderMale">мужской</label>
+			<input id="userGenderFemale" type="radio" name="userGender">&nbsp;<label for="userGenderFemale">женский</label>
+			<br>
+			<h2>Данные для создания личного кабинета</h2>
+			<label>*&nbsp;Адрес электронной почты:</label>
+			<br><br>
+			<input required type="email" size="75" name="userEmail">
+			<br><br>
+			<label>*&nbsp;Пароль для создания личного кабинета:</label>
+			<br><br>
+			<input required type="password" size="75" name="userPassword">
+			<br><br>
+			<label>*&nbsp;Подтверждение пароля:</label>
+			<br><br>
+			<input required type="password" size="75" name="passwordConfirm">
+			<br>
+			<h2>Материалы для конференции</h2>
+			<label>*&nbsp;Тема доклада:</label>
+			<br><br>
+			<input required type="text" size="75" name="caseTopic">
+			<br><br>
+			<label>*&nbsp;Тезисы доклада (не более 1000 символов)</label>
+			<br><br>
+			<textarea cols="73" rows="15" name="caseMainState"></textarea>
+			<br><br>
+			<label>Файл презентации:</label>
+			<br><br>
+			<input type="file" name="prezFile">
+			<br>
+			<h2>Дополнительные опции</h2>
+			<input id="hostel" type="checkbox" name="additional" value="hostel">&nbsp;<label for="hostel">Проживание в отеле</label> <br>
+			<input id="breakfast" checked type="checkbox" name="additional" value="breakfast">&nbsp;<label for="breakfast">Завтрак</label> <br>
+			<input id="dinner" type="checkbox" name="additional" value="dinner">&nbsp;<label for="dinner">Обед</label> <br>
+			<input id="eveningMeal" type="checkbox" name="additional" value="eveningMeal">&nbsp;<label for="eveningMeal">Ужин</label> <br>
+			<hr>
+			<input type="submit" value="Отправить" name="send">
+			<hr>
+			<small>*&nbsp;Поля, отмеченные звёздочкой, являются обязательными для заполнения</small>
+		</form>
+	</body>
+</html>
