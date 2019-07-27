@@ -45,16 +45,14 @@ footer {
 }
 
 .logo {
-	position: absolute;
-	top: 40px;
 	float: left;
+	margin-top: 40px;
 }
 
 .city {
-	position: absolute;
 	float: left;
-	top: 54px;
-	left: 180px;
+	margin-top: 54px;
+	margin-left: 59px;
 	font-size: 16px;
 	width: 72px;
 	color: #448ccb;
@@ -64,10 +62,8 @@ footer {
 }
 
 .search {
-	position: absolute;
 	float: right;
-	right: 0;
-	top: 40px;
+	margin-top: 40px;
 	height: 45px;
 	width: 280px;
 	border: none;
@@ -82,11 +78,10 @@ footer {
 }
 
 .weather {
-	position: absolute;
-	float: right;
+	float: left;
 	height: 24px;
-	top: 54px;
-	right: 365px;
+	margin-top: 54px;
+	margin-left: 294px;
 	font-size: 16px;
 	padding-left: 40px;
 	background-image: url('img/cloudy.png');
