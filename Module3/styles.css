@@ -55,12 +55,12 @@ footer {
 	float: left;
 	top: 54px;
 	left: 180px;
-	border: none;
-	background-color: transparent;
 	font-size: 16px;
-	width: 78px;
+	width: 72px;
 	color: #448ccb;
-	text-decoration: underline;
+	background-image: url('img/down-arrow.png');
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .search {
