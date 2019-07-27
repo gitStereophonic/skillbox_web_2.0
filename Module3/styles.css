@@ -14,9 +14,9 @@ h2 {
 
 footer {
 	background-color: #00122f;
-	height: 312px;
+	height: 274px;
 	margin-top: 60px;
-	padding-top: 58px;
+	padding-top: 56px;
 }
 
 .black-bar {
@@ -338,11 +338,10 @@ footer {
 .rights {
 	border-top: 1px solid #26354e;
 	height: 50px;
-	margin-bottom: 0;
-	position: absolute;
-	bottom: 0;
+	margin-top: 60px;
 	width: 100%;
 	justify-content: center;
+
 }
 
 .rights p {
@@ -385,9 +384,7 @@ footer {
 }
 
 .contacts {
-	position: absolute;
-	top: 0;
-	right: 0;
+	float: right;
 }
 
 .network-logo {
