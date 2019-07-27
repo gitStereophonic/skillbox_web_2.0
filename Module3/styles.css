@@ -313,26 +313,19 @@ footer {
 .footer {
 	color: white;
 	height: 100%;
-	position: relative;
-}
-
-.site-info {
-	position: relative;
 }
 
 .footer-nav {
-	width: 435px;
-	position: relative;
+	width: 235px;
+	display: inline-block;
 }
 
-.footer-nav-left, .footer-nav-right {
-	display: inline;
+.footer-nav-left {
+	display: inline-block;
 }
 
 .footer-nav-right {
-	top: 0;
-	left: 138px;
-	position: absolute;
+	float: right;
 }
 
 .footer-nav a {
@@ -360,9 +353,8 @@ footer {
 }
 
 .footer-info {
-	position: absolute;
-	left: 432px;
-	top: 0;
+	display: inline-block;
+	margin-left: 200px;
 }
 
 .footer-logo-link {
