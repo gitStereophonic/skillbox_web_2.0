@@ -14,9 +14,9 @@ h2 {
 
 footer {
 	background-color: #00122f;
-	height: 312px;
+	height: 274px;
 	margin-top: 60px;
-	padding-top: 58px;
+	padding-top: 56px;
 }
 
 .black-bar {
@@ -45,16 +45,14 @@ footer {
 }
 
 .logo {
-	position: absolute;
-	top: 40px;
 	float: left;
+	margin-top: 40px;
 }
 
 .city {
-	position: absolute;
 	float: left;
-	top: 54px;
-	left: 180px;
+	margin-top: 54px;
+	margin-left: 59px;
 	font-size: 16px;
 	width: 72px;
 	color: #448ccb;
@@ -64,10 +62,8 @@ footer {
 }
 
 .search {
-	position: absolute;
 	float: right;
-	right: 0;
-	top: 40px;
+	margin-top: 40px;
 	height: 45px;
 	width: 280px;
 	border: none;
@@ -82,11 +78,10 @@ footer {
 }
 
 .weather {
-	position: absolute;
-	float: right;
+	float: left;
 	height: 24px;
-	top: 54px;
-	right: 365px;
+	margin-top: 54px;
+	margin-left: 294px;
 	font-size: 16px;
 	padding-left: 40px;
 	background-image: url('img/cloudy.png');
@@ -94,15 +89,10 @@ footer {
 	color: #91919f;
 }
 
-.menu-container {
-	height: 70px;
-}
-
 .menu {
-	position: absolute;
 	padding-left: 0;
-	top: 18px;
-	margin: auto;
+	margin-top: 18px;
+	margin-bottom: 35px;
 	color: #e1e1e5;
 }
 
@@ -136,27 +126,26 @@ footer {
 
 	.news-item-props {
 		font-size: 12px;
-		position: relative;
 	}
 
 		.news-item-props a {
+			float: left;
 			color: #91919f;
 			text-decoration: none;
+			width: 102px;
 		}
 
 		.news-time {
-			position: absolute;
-			top: 0;
-			left: 120px;
+			display: inline;
+			margin-left: 0;
 			padding-left: 15px;
 			background-image: url('img/icon-time.png');
 			background-repeat: no-repeat;
 		}
 
 		.news-comments-count {
-			position: absolute;
-			top: 0;
-			left: 180px;
+			display: inline;
+			margin-left: 20px;
 			padding-left: 15px;
 			background-image: url('img/icon-comments.png');
 			background-repeat: no-repeat;
@@ -195,20 +184,18 @@ footer {
 }
 
 .big-news-props {
-	position: relative;
 	font-size: 12px;
 	color: white;
 }
 
 .big-news-date {
-	top: 0;
+	float: left;
+	width: 108px;
 }
 
 .big-news-time {
-	position: absolute;
-	top: 0;
 	padding-left: 16px;
-	left: 108px;
+	display: inline;
 	background-image: url('img/clock.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -216,22 +203,23 @@ footer {
 
 .news-block {
 	margin-top: 20px;
-	position: relative;
 }
 
 .news-block section, .news-block section img {
-	width: 222px;
+	width: 221px;
+}
+
+.news-block section img {
+	height: 142px;
 }
 
 .news-block-left {
-	top: 0;
-	left: 0;
+	display: inline-block;
 }
 
 .news-block-right {
-	position: absolute;
-	top: 0;
-	left: 240px;
+	float: right;
+	margin-left: 20px;
 }
 
 .news-block-titles {
@@ -325,26 +313,19 @@ footer {
 .footer {
 	color: white;
 	height: 100%;
-	position: relative;
-}
-
-.site-info {
-	position: relative;
 }
 
 .footer-nav {
-	width: 435px;
-	position: relative;
+	width: 235px;
+	display: inline-block;
 }
 
-.footer-nav-left, .footer-nav-right {
-	display: inline;
+.footer-nav-left {
+	display: inline-block;
 }
 
 .footer-nav-right {
-	top: 0;
-	left: 138px;
-	position: absolute;
+	float: right;
 }
 
 .footer-nav a {
@@ -357,11 +338,10 @@ footer {
 .rights {
 	border-top: 1px solid #26354e;
 	height: 50px;
-	margin-bottom: 0;
-	position: absolute;
-	bottom: 0;
+	margin-top: 60px;
 	width: 100%;
 	justify-content: center;
+
 }
 
 .rights p {
@@ -372,9 +352,8 @@ footer {
 }
 
 .footer-info {
-	position: absolute;
-	left: 432px;
-	top: 0;
+	display: inline-block;
+	margin-left: 200px;
 }
 
 .footer-logo-link {
@@ -405,9 +384,7 @@ footer {
 }
 
 .contacts {
-	position: absolute;
-	top: 0;
-	right: 0;
+	float: right;
 }
 
 .network-logo {
