@@ -89,15 +89,10 @@ footer {
 	color: #91919f;
 }
 
-.menu-container {
-	height: 70px;
-}
-
 .menu {
-	position: absolute;
 	padding-left: 0;
-	top: 18px;
-	margin: auto;
+	margin-top: 18px;
+	margin-bottom: 35px;
 	color: #e1e1e5;
 }
 
