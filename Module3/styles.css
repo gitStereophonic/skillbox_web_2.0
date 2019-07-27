@@ -184,20 +184,18 @@ footer {
 }
 
 .big-news-props {
-	position: relative;
 	font-size: 12px;
 	color: white;
 }
 
 .big-news-date {
-	top: 0;
+	float: left;
+	width: 108px;
 }
 
 .big-news-time {
-	position: absolute;
-	top: 0;
 	padding-left: 16px;
-	left: 108px;
+	display: inline;
 	background-image: url('img/clock.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -205,22 +203,23 @@ footer {
 
 .news-block {
 	margin-top: 20px;
-	position: relative;
 }
 
 .news-block section, .news-block section img {
-	width: 222px;
+	width: 221px;
+}
+
+.news-block section img {
+	height: 142px;
 }
 
 .news-block-left {
-	top: 0;
-	left: 0;
+	display: inline-block;
 }
 
 .news-block-right {
-	position: absolute;
-	top: 0;
-	left: 240px;
+	float: right;
+	margin-left: 20px;
 }
 
 .news-block-titles {
