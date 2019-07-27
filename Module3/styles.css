@@ -377,6 +377,11 @@ footer {
 	top: 0;
 }
 
+.footer-logo-link {
+	text-decoration: none;
+	color: white;
+}
+
 .footer-logo {
 	background-image: url('img/logo-min.png');
 	background-repeat: no-repeat;
