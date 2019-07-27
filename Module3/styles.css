@@ -31,7 +31,7 @@ footer {
 	}
 
 .fixed-container {
-	width: 960px;
+	width: 1000px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -57,7 +57,7 @@ footer {
 	left: 180px;
 	border: none;
 	background-color: transparent;
-	font-size: 14px;
+	font-size: 16px;
 	width: 78px;
 	color: #448ccb;
 	text-decoration: underline;
@@ -112,7 +112,7 @@ footer {
 	}
 
 	.nav-item {
-		font-size: 14px;
+		font-size: 16px;
 		color: black;
 		text-decoration: none;
 	}
@@ -126,7 +126,7 @@ footer {
 .news-item {
 	padding-left: 18px;
 	margin-bottom: 27px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 	.news-item-text {
@@ -163,7 +163,7 @@ footer {
 		}
 
 .column-center {
-	width: 420px;
+	width: 462px;
 	margin-left: 20px;
 	float: left;
 }
@@ -177,7 +177,7 @@ footer {
 .main-news-props {
 	position: relative;
 	top: 110px;
-	left: 20px;
+	left: 18px;
 }
 
 .big-news-label {
@@ -220,7 +220,7 @@ footer {
 }
 
 .news-block section, .news-block section img {
-	width: 200px;
+	width: 222px;
 }
 
 .news-block-left {
@@ -231,11 +231,11 @@ footer {
 .news-block-right {
 	position: absolute;
 	top: 0;
-	left: 220px;
+	left: 240px;
 }
 
 .news-block-titles {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -269,6 +269,10 @@ footer {
 		margin-bottom: 20px;
 	}
 
+.special-news-fixed-container {
+	margin-top: 20px;
+}
+
 .special-news {
 	position: relative;
 	background-color: white;
@@ -277,13 +281,14 @@ footer {
 .news-big-special {
 	float: left;
 	height: 394px;
-	width: 568px;
+	width: 588px;
 	background-image: url('img/news-special.png');
 }
 
 .news-big-special-props {
-	width: 490px;
+	width: 510px;
 	top: 108px;
+	margin: 0;
 }
 
 .special-big-title, .big-news-description {
@@ -292,12 +297,12 @@ footer {
 
 .big-news-description {
 	color: #cbcbcb;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 .news-special {
 	float: right;
-	width: 392px;
+	width: 412px;
 }
 
 .special-news-item-text {
@@ -314,6 +319,7 @@ footer {
 	margin: 12px auto 25px;
 	position: relative;
 	border-radius: 24px;
+	font-size: 14px;
 }
 
 .footer {
@@ -346,6 +352,7 @@ footer {
 	text-decoration: none;
 	color: white;
 	margin-bottom: 20px;
+	font-size: 16px;
 }
 
 .rights {
@@ -355,12 +362,14 @@ footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	justify-content: center;
 }
 
 .rights p {
 	text-align: center;
 	vertical-align: middle;
 	color: #8d9198;
+	font-size: 14px;
 }
 
 .footer-info {
@@ -388,6 +397,7 @@ footer {
 .footer-info nav a {
 	text-decoration: none;
 	color: white;
+	font-size: 16px;
 }
 
 .contacts {
