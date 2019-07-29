@@ -65,17 +65,34 @@ footer {
 	float: right;
 	margin-top: 40px;
 	height: 45px;
-	width: 280px;
-	border: none;
-	border-radius: 22px;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-image: url('img/search.png');
-	background-repeat: no-repeat;
-	background-position: right 20px center;
+	width: 320px;
+	position: relative;
 }
+	.search input {
+		height: 100%;
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 30px;
+		border-radius: 22px;
+		background-color: #f3f3f3;
+		border: none;
+		font-size: 14px;
+	}
+
+	.search button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		width: 30px;
+		height: 30px;
+		background-image: url('img/search.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
 
 .weather {
 	float: left;
