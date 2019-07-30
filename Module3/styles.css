@@ -44,14 +44,24 @@ footer {
 	height: 100px;
 }
 
-.logo {
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.left-header {
 	float: left;
 	margin-top: 40px;
 }
 
+.logo {
+	float: left;
+}
+
 .city {
 	float: left;
-	margin-top: 54px;
+	margin-top: 14px;
 	margin-left: 59px;
 	font-size: 16px;
 	width: 72px;
@@ -61,9 +71,13 @@ footer {
 	background-position: right center;
 }
 
-.search {
+.right-header {
 	float: right;
 	margin-top: 40px;
+}
+
+.search {
+	float: left;
 	height: 45px;
 	width: 320px;
 	position: relative;
@@ -97,8 +111,8 @@ footer {
 .weather {
 	float: left;
 	height: 20px;
-	margin-top: 54px;
-	margin-left: 294px;
+	margin-top: 14px;
+	margin-right: 46px;
 	padding-left: 40px;
 	background-image: url('img/cloudy.png');
 	background-repeat: no-repeat;
