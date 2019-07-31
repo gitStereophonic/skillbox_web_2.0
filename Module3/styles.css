@@ -59,16 +59,22 @@ footer {
 	float: left;
 }
 
-.city {
-	float: left;
+.city-container {
 	margin-top: 14px;
 	margin-left: 59px;
-	font-size: 16px;
+	float: left;
 	width: 72px;
-	color: #448ccb;
 	background-image: url('img/down-arrow.png');
 	background-repeat: no-repeat;
 	background-position: right center;
+}
+
+.city {
+	font-size: 16px;
+	width: 55px;
+	color: #448ccb;
+	border-bottom: 1px dashed #448ccb;
+	text-decoration: none;
 }
 
 .right-header {
