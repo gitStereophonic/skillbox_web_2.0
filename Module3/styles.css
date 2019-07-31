@@ -277,11 +277,11 @@ footer {
 	margin-top: 20px;
 }
 
-.news-block section, .news-block section img {
+.news-block article, .news-block article img {
 	width: 221px;
 }
 
-.news-block section img {
+.news-block article img {
 	height: 142px;
 }
 
