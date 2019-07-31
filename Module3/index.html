@@ -12,35 +12,40 @@
 			</div>
 		</div>
 		<header class="header">
-			<div class="fixed-container">
-				<a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
-				<a href="#" class="city">
-					Москва
-				</a>
-				<div class="weather">+22&deg;C</div>
-				<input type="text" class="search" placeholder="Поиск по сайту" name="search">
+			<div class="fixed-container clearfix">
+				<div class="left-header clearfix">
+					<a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
+					<div class="city-container">
+						<a href="#" class="city">
+							Москва
+						</a>
+					</div>
+				</div>
+				<div class="right-header">
+					<div class="weather">
+						<p>+22&deg;C</p>
+					</div>
+					<div class="search">
+						<input type="search" placeholder="Поиск по сайту" name="search">
+						<button></button>
+					</div>
+				</div>
 			</div>
 		</header>
 		<div class="menu-container">
 			<div class="fixed-container">
 				<nav class="menu">
-					<a href="#" class="nav-item">Главная</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Политика</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Общество</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Экономика</a>
-					<span>/</span>
-					<a href="#" class="nav-item">В мире</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Проишествия</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Спорт</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Наука</a>
-					<span>/</span>
-					<a href="#" class="nav-item">Туризм</a>
+					<ul>
+						<li><a href="#" class="nav-item">Главная</a></li>
+						<li><a href="#" class="nav-item">Политика</a></li>
+						<li><a href="#" class="nav-item">Общество</a></li>
+						<li><a href="#" class="nav-item">Экономика</a></li>
+						<li><a href="#" class="nav-item">В мире</a></li>
+						<li><a href="#" class="nav-item">Проишествия</a></li>
+						<li><a href="#" class="nav-item">Спорт</a></li>
+						<li><a href="#" class="nav-item">Наука</a></li>
+						<li><a href="#" class="nav-item">Туризм</a></li>
+					</ul>
 				</nav>
 			</div>
 		</div>
@@ -183,7 +188,7 @@
 				</aside>
 			</div>
 			<div class="fixed-container special-news-fixed-container">
-				<div class="special-news">
+				<div class="special-news clearfix">
 					<div class="news-big-special">
 						<section class="news-big-special-props main-news-props">
 							<a href="#" class="big-news-label">/ Политика</a>
