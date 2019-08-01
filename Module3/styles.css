@@ -384,7 +384,8 @@ footer {
 	position: relative;
 }
 
-	.all-news-btn a {
+	.all-news-btn p {
+		margin: 0;
 		text-decoration: none;
 		color: #438ccc;
 		position: absolute;
