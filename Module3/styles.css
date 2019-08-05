@@ -8,7 +8,7 @@ html, body {
 h2 {
 	font-size: 20px;
 	padding: 27px 0 27px 18px;
-	margin: 0 0 34px;
+	margin: 0 0 30px;
 	line-height: 15px;
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -188,7 +188,7 @@ footer {
 
 .news-item {
 	padding-left: 18px;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
 	font-size: 16px;
 }
 
@@ -329,7 +329,12 @@ footer {
 }
 
 	.column-right img {
-		margin-bottom: 20px;
+		margin-bottom: 16px;
+		margin-top: 0;
+	}
+
+	.column-right img:nth-child(even) {
+		margin-bottom: 0;
 	}
 
 .special-news-fixed-container {
@@ -376,7 +381,7 @@ footer {
 	border: 1px solid #438ccc;
 	width: 177px;
 	height: 45px;
-	margin: 38px auto 25px;
+	margin: 35px auto 24px;
 	position: relative;
 	border-radius: 24px;
 	font-size: 14px;
