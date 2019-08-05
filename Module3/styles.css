@@ -527,7 +527,11 @@ footer {
 
 .phone, .e-mail {
 	background-repeat: no-repeat;
+	background-position-y: center;
 	padding-left: 34px;
 	font-size: 18px;
 	margin-left: 26px;
+	text-decoration: none;
+	display: block;
+	color: white;
 }
