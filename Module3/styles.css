@@ -8,16 +8,15 @@ html, body {
 h2 {
 	font-size: 20px;
 	padding: 27px 0 27px 18px;
-	margin: 0 0 34px;
+	margin: 0 0 30px;
 	line-height: 15px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
 footer {
 	background-color: #00122f;
-	height: 274px;
 	margin-top: 60px;
-	padding-top: 56px;
+	padding-top: 57px;
 }
 
 .black-bar {
@@ -188,7 +187,7 @@ footer {
 
 .news-item {
 	padding-left: 18px;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
 	font-size: 16px;
 }
 
@@ -329,7 +328,12 @@ footer {
 }
 
 	.column-right img {
-		margin-bottom: 20px;
+		margin-bottom: 16px;
+		margin-top: 0;
+	}
+
+	.column-right img:nth-child(even) {
+		margin-bottom: 0;
 	}
 
 .special-news-fixed-container {
@@ -350,7 +354,6 @@ footer {
 .news-big-special-props {
 	width: 510px;
 	top: 108px;
-	margin: 0;
 }
 
 .special-big-title, .big-news-description {
@@ -376,7 +379,7 @@ footer {
 	border: 1px solid #438ccc;
 	width: 177px;
 	height: 45px;
-	margin: 38px auto 25px;
+	margin: 35px auto 24px;
 	position: relative;
 	border-radius: 24px;
 	font-size: 14px;
@@ -394,33 +397,46 @@ footer {
 
 .footer {
 	color: white;
-	height: 100%;
 }
 
-.footer-nav {
-	width: 235px;
-	display: inline-block;
+.footer nav ul {
+	list-style-type: none;
+	font-size: 0;
+	padding-left: 0;
 }
 
-.footer-nav-left {
-	display: inline-block;
-}
+	.footer nav ul li {
+		margin-bottom: 20px;
+	}
 
-.footer-nav-right {
-	float: right;
-}
+	.footer nav ul li:last-child {
+		margin-bottom: 0;
+	}
 
-.footer-nav a {
-	text-decoration: none;
-	color: white;
-	margin-bottom: 20px;
-	font-size: 16px;
-}
+	.footer-nav {
+		width: 235px;
+		float: left;
+	}
+
+		.footer-nav-left {
+			display: inline-block;
+		}
+
+		.footer-nav-right {
+			float: right;
+		}
+
+			.footer-nav a {
+				text-decoration: none;
+				color: white;
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
 
 .rights {
 	border-top: 1px solid #26354e;
 	height: 50px;
-	margin-top: 60px;
+	margin-top: 58px;
 	width: 100%;
 	justify-content: center;
 
@@ -434,36 +450,36 @@ footer {
 }
 
 .footer-info {
-	display: inline-block;
+	float: left;
 	margin-left: 200px;
 }
 
-.footer-logo-link {
-	text-decoration: none;
-	color: white;
-}
+	.footer-logo-link {
+		text-decoration: none;
+		color: white;
+	}
 
-.footer-logo {
-	background-image: url('img/logo-min.png');
-	background-repeat: no-repeat;
-	padding-left: 50px;
-	height: 42px;
-}
+	.footer-logo {
+		background-image: url('img/logo-min.png');
+		background-repeat: no-repeat;
+		padding-left: 50px;
+		height: 42px;
+	}
 
-.footer-logo p {
-	margin: 4px;
-	font-size: 14px;
-}
+	.footer-logo p {
+		margin: 4px;
+		font-size: 14px;
+	}
 
-.footer-info nav {
-	margin-top: 20px;
-}
+	.footer-info nav {
+		margin-top: 20px;
+	}
 
-.footer-info nav a {
-	text-decoration: none;
-	color: white;
-	font-size: 16px;
-}
+	.footer-info nav a {
+		text-decoration: none;
+		color: white;
+		font-size: 16px;
+	}
 
 .contacts {
 	float: right;
@@ -511,7 +527,11 @@ footer {
 
 .phone, .e-mail {
 	background-repeat: no-repeat;
+	background-position-y: center;
 	padding-left: 34px;
 	font-size: 18px;
 	margin-left: 26px;
+	text-decoration: none;
+	display: block;
+	color: white;
 }
