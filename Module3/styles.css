@@ -312,10 +312,10 @@ footer {
 
 .central-container {
 	padding-top: 20px;
+	padding-bottom: 60px;
 	background-color: #f9f9f9;
 	background-image: url('img/central-bg-top.png');
 	background-repeat: repeat-x;
-	margin-bottom: 60px;
 }
 
 	.central-container .fixed-container {
@@ -491,35 +491,53 @@ footer {
 	float: right;
 }
 
-.network-logo {
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	border: 1px solid white;
-	border-radius: 21px;
-	margin-left: 20px;
-	background-position: center center;
-}
-
-	.vk-logo {
-		background-image: url('img/vk.png');
-		background-repeat: no-repeat;
+	.s-networks ul {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
 	}
 
-	.fb-logo {
-		background-image: url('img/facebook.png');
-		background-repeat: no-repeat;
-	}
+		.s-networks ul li {
+			display: inline-block;
+			margin-left: 20px;
+		}
 
-	.tw-logo {
-		background-image: url('img/twitter.png');
-		background-repeat: no-repeat;
-	}
+		.s-networks ul li:nth-child(1) {
+			margin-left: 0;
+		}
 
-	.it-logo {
-		background-image: url('img/instagram.png');
-		background-repeat: no-repeat;
-	}
+		.s-networks a {
+			text-decoration: none;
+		}
+
+			.network-logo {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border: 1px solid white;
+				border-radius: 21px;
+				background-position: center center;
+			}
+
+			.vk-logo {
+				background-image: url('img/vk.png');
+				background-repeat: no-repeat;
+			}
+
+			.fb-logo {
+				background-image: url('img/facebook.png');
+				background-repeat: no-repeat;
+			}
+
+			.tw-logo {
+				background-image: url('img/twitter.png');
+				background-repeat: no-repeat;
+			}
+
+			.it-logo {
+				background-image: url('img/instagram.png');
+				background-repeat: no-repeat;
+			}
 
 .phone {
 	background-image: url('img/phone.png');
@@ -536,7 +554,6 @@ footer {
 	background-position-y: center;
 	padding-left: 34px;
 	font-size: 18px;
-	margin-left: 26px;
 	text-decoration: none;
 	display: block;
 	color: white;
