@@ -385,15 +385,21 @@ footer {
 	font-size: 14px;
 }
 
-	.all-news-btn p {
-		margin: 0;
-		text-decoration: none;
-		color: #438ccc;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateY(-50%) translateX(-50%);
+	.all-news-btn a {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
 	}
+
+		.all-news-btn a p {
+			margin: 0;
+			text-decoration: none;
+			color: #438ccc;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+		}
 
 .footer {
 	color: white;
