@@ -491,6 +491,25 @@ footer {
 	float: right;
 }
 
+	.s-networks ul {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+		.s-networks ul li {
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+		.s-networks ul li:nth-child(1) {
+			margin-left: 0;
+		}
+
+		.s-networks a {
+			text-decoration: none;
+		}
+
 .network-logo {
 	display: inline-block;
 	width: 40px;
