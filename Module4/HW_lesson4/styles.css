@@ -3,6 +3,12 @@ html, body {
   padding: 0;
   min-width: 1000px;
   font-family: Arial;
+  background-color: #f5f5f5;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: normal;
 }
 
 .fixed-container {
@@ -11,8 +17,21 @@ html, body {
   position: relative;
 }
 
+.main-container {
+  margin-top: 65px;
+}
+
 .clearfix:after {
   content: '';
   clear: both;
   display: block;
+}
+
+.column-left, .column-right {
+  width: 470px;
+  float: left;
+}
+
+.column-right {
+  margin-left: 20px;
 }
