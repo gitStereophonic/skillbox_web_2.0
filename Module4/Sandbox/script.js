@@ -1,7 +1,18 @@
 $(function () {
   function changeFontColor() {
-    $('#container').toggleClass('newStyle');
+    $('.container').toggleClass('newStyle');
   }
 
-  setInterval(changeFontColor, 2000);
+  $('textarea').on('focus', function () {
+    $(this).css('background-color', 'green');
+  });
+
+  $('textarea').on('blur', function () {
+    $(this).css('background-color', 'white');
+  });
+
+  $('a').on('click', function () {
+    changeFontColor();
+    return false;
+  });
 });

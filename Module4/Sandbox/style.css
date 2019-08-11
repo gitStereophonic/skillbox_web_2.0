@@ -3,8 +3,13 @@ html, body {
   padding: 0;
 }
 
-#container {
+.container, textarea {
   margin: 20px;
+}
+
+textarea {
+  width: 300px;
+  height: 200px;
 }
 
 .newStyle {
