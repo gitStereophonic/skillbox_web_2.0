@@ -9,6 +9,7 @@ html, body {
 h2 {
   font-size: 21px;
   font-weight: normal;
+  margin-bottom: 30px;
 }
 
 .fixed-container {
@@ -32,6 +33,62 @@ h2 {
   float: left;
 }
 
+.tips {
+  color: #8993ad;
+}
+
+.empty-list {
+  font-size: 16px;
+  margin-top: 80px;
+}
+
 .column-right {
   margin-left: 20px;
+}
+
+.column-right form {
+  padding: 59px 40px 56px;
+  background-color: white;
+}
+
+.input-labels {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input-labels span {
+  font-size: 18px;
+}
+
+.inputs {
+  display: block;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ebebeb;
+  font-size: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+
+.input-name {
+  height: 45px;
+  margin-bottom: 28px;
+}
+
+.input-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 230px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #2174fd;
+  color: white;
+  font-size: 16px;
+  width: 224px;
+  height: 55px;
 }

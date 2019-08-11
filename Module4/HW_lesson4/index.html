@@ -12,9 +12,17 @@
   <div class="fixed-container main-container clearfix">
     <div id="task-list" class="column-left">
       <h2>Список дел:</h2>
+      <p class="tips empty-list">Список пуст...</p>
     </div>
     <div class="column-right">
       <h2>Добавить новое дело</h2>
+      <form>
+        <label for="new-task-name" class="tips input-labels"><span>*</span> Название</label>
+        <input type="text" name="newTaskName" id="new-task-name" class="inputs input-name">
+        <label for="new-task-desc" class="tips input-labels"><span>*</span> Описание</label>
+        <textarea name="newTaskDesc" id="new-task-desc" class="inputs input-desc"></textarea>
+        <button id="add-task" class="btn">Добавить дело</button>
+      </form>
     </div>
   </div>
 </body>
