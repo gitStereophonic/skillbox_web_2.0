@@ -1,0 +1,146 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 1000px;
+  font-family: Arial;
+  background-color: #f5f5f5;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+  float: left;
+  max-width: 80%;
+}
+
+.fixed-container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-container {
+  margin-top: 65px;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.column-left, .column-right {
+  width: 470px;
+  float: left;
+}
+
+.tips {
+  color: #8993ad;
+}
+
+.empty-list {
+  font-size: 16px;
+  margin-top: 80px;
+}
+
+.task-container {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.new-task-header {
+  padding: 18px 24px 18px 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.close-btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  width: 10px;
+  margin-left: 20px;
+  padding: 0;
+  background-image: url('img/clear-button.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.options-btn {
+  float: right;
+  margin-top: 5px;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  background-image: url('img/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task-description {
+  padding: 10px 20px;
+  min-height: 65px;
+}
+
+.column-right {
+  margin-left: 20px;
+}
+
+.column-right form {
+  padding: 59px 40px 56px;
+  background-color: white;
+}
+
+.input-labels {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input-labels span {
+  font-size: 18px;
+}
+
+.inputs {
+  display: block;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ebebeb;
+  font-size: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+
+.input-name {
+  height: 45px;
+  margin-bottom: 28px;
+}
+
+.input-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 230px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #2174fd;
+  color: white;
+  font-size: 16px;
+  width: 224px;
+  height: 55px;
+}
