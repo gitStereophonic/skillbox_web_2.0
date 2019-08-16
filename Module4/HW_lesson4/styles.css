@@ -12,6 +12,13 @@ h2 {
   margin-bottom: 30px;
 }
 
+h3 {
+  font-size: 16px;
+  margin: 0;
+  float: left;
+  max-width: 80%;
+}
+
 .fixed-container {
   width: 960px;
   margin: 0 auto;
@@ -40,6 +47,51 @@ h2 {
 .empty-list {
   font-size: 16px;
   margin-top: 80px;
+}
+
+.task-container {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.new-task-header {
+  padding: 18px 24px 18px 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.close-btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  width: 10px;
+  margin-left: 20px;
+  padding: 0;
+  background-image: url('img/clear-button.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.options-btn {
+  float: right;
+  margin-top: 5px;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  background-image: url('img/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task-description {
+  padding: 10px 20px;
+  min-height: 65px;
 }
 
 .column-right {
