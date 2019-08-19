@@ -1,13 +1,11 @@
 $(function () {
 
   const disableScroll = function () {
-    $('html, body').on('mousewheel', function () {
-      return false;
-    });
+    $('body').addClass('scroll-off');
   }
 
   const enableScroll = function () {
-    $('html, body').off('mousewheel');
+    $('body').removeClass('scroll-off');
   }
 
   $('#changeButton')
