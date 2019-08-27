@@ -32,7 +32,14 @@ $(function () {
       }
     });
 
-    var optionsBtn = $('<button></button>');
+    var optionsBtn = $('<a></a>');
+    optionsBtn.click(function () {
+      $(this).parent().parent().children('.task-description').slideToggle('slow');
+      if ($(this).hasClass('rotated'))
+        $(this).removeClass('rotated');
+      else
+        $(this).addClass('rotated');
+    });
     optionsBtn.addClass('options-btn');
 
     var newTaskHeader = $('<div></div>');

@@ -87,11 +87,35 @@ h3 {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  animation: rotate-0 0.5s ease-out forwards;
+}
+
+.rotated {
+  animation: rotate-90 0.5s ease-out forwards;
+}
+
+@keyframes rotate-0 {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate-90 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
 
 .task-description {
   padding: 10px 20px;
-  min-height: 65px;
+  height: 65px;
+  overflow: hidden;
 }
 
 .column-right {
