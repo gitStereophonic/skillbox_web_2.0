@@ -3,17 +3,6 @@ html, body {
   padding: 0;
 }
 
-.container, textarea {
+.container, button {
   margin: 20px;
-}
-
-textarea {
-  width: 300px;
-  height: 200px;
-}
-
-.newStyle {
-  color: green;
-  font-size: 18px;
-  font-weight: bold;
 }
