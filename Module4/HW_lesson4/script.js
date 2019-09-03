@@ -45,7 +45,7 @@ $(function () {
     });
 
     // "Кнопка", скрывающая описание задания
-    var optionsBtn = $('<a></a>');
+    var optionsBtn = $('<button></button>');
     optionsBtn.addClass('options-btn');
     optionsBtn.click(function () {
       // Триггер появления/исчезновения описания

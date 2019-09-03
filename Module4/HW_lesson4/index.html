@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+  <meta charset="utf-8">
   <title>Список дел</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="jquery-3.4.1.min.js"></script>
@@ -16,10 +17,15 @@
     <div class="column-right">
       <h2>Добавить новое дело</h2>
       <form>
-        <label for="new-task-name" class="tips input-labels"><span>*</span> Название</label>
+        <label for="new-task-name" class="tips input-labels">
+          <span>*</span> Название
+        </label>
         <input type="text" name="newTaskName" id="new-task-name" class="inputs input-name">
-        <label for="new-task-desc" class="tips input-labels"><span>*</span> Описание</label>
-        <textarea name="newTaskDesc" id="new-task-desc" class="inputs input-desc"></textarea>
+        <label for="new-task-desc" class="tips input-labels">
+          <span>*</span> Описание
+        </label>
+        <textarea name="newTaskDesc" id="new-task-desc" class="inputs input-desc">
+        </textarea>
         <button id="add-task" class="btn">Добавить дело</button>
       </form>
     </div>
