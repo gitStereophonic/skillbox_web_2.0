@@ -1,7 +1,7 @@
 body {
   font: 44px "Century Gothic", Futura, sans-serif;
   margin: 20px;
-  margin-top: 200px;
+  margin-top: 110px;
 }
 
 ol, ul {
@@ -25,6 +25,10 @@ ol, ul {
 
 .history-btn:hover {
   animation: hover-btn 0.5s ease-out both;
+}
+
+.history-btn p {
+  margin: 0;
 }
 
 @keyframes hover-btn {
@@ -75,6 +79,10 @@ ol, ul {
   width: 1100px;
   margin: 0 auto;
   position: relative;
+}
+
+.game-board {
+  margin-top: 200px;
 }
 
 .game-info {
