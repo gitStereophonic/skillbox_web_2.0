@@ -63,7 +63,14 @@ class Game extends React.Component {
     };
   }
 
+  clearButtons() {
+    const btns = document.getElementsByClassName("current-btn");
+    if (btns.length)
+      btns[0].classList.remove('current-btn');
+  }
+
   handleClick(i) {
+    this.clearButtons();
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -91,11 +98,7 @@ class Game extends React.Component {
   }
 
   jumpTo(step, e) {
-    const btn = document.getElementsByClassName("current-btn");
-    console.log(btn);
-    if (btn.length)
-      btn[0].classList.remove('current-btn');
-
+    this.clearButtons();
     e.currentTarget.classList.add('current-btn');
 
     this.setState({
