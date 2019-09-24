@@ -90,7 +90,14 @@ class Game extends React.Component {
     });
   }
 
-  jumpTo(step) {
+  jumpTo(step, e) {
+    const btn = document.getElementsByClassName("current-btn");
+    console.log(btn);
+    if (btn.length)
+      btn[0].classList.remove('current-btn');
+
+    e.currentTarget.classList.add('current-btn');
+
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
@@ -105,18 +112,18 @@ class Game extends React.Component {
     const moves = history.map((step, move) => {
       const desc = move ?
         [
-          <p>{'Go to move #' + move}</p>,
-          <p>{
+          <p key='move'>{'Go to move #' + move}</p>,
+          <p key='coords'>{
             '{ ' + step.sign + ' at row: ' +
             (step.coord.row + 1) + ' and column: ' + (step.coord.col + 1) + ' }'
           }</p>
         ] : [
-          <p>Go to game start</p>
+          <p key='start-game'>Go to game start</p>
         ];
 
       return (
         <li key={move}>
-          <button className='history-btn' onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className='history-btn' onClick={(e) => this.jumpTo(move, e)}>{desc}</button>
         </li>
       );
     });
