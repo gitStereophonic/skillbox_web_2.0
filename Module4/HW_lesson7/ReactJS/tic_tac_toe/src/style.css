@@ -1,10 +1,39 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 44px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  margin-top: 200px;
 }
 
 ol, ul {
-  padding-left: 30px;
+  padding-left: 0;
+}
+
+.status-header {
+  text-align: center;
+}
+
+.history-btn {
+  width: 100%;
+  padding: 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #999;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.history-btn:hover {
+  animation: hover-btn 0.5s ease-out both;
+}
+
+@keyframes hover-btn {
+  from {
+    background-color: #999;
+  }
+  to {
+    background-color: #2a2;
+  }
 }
 
 .board-row:after {
@@ -21,15 +50,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 154px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 134px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 134px;
 }
 
 .square:focus {
@@ -43,8 +72,17 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 150px;
+  width: 340px;
+}
+
+.game-info li {
+  list-style-type: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
