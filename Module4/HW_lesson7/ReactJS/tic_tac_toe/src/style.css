@@ -6,10 +6,12 @@ body {
 
 ol, ul {
   padding-left: 0;
+  margin-top: 10px;
 }
 
 .status-header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .history-btn {
@@ -96,4 +98,31 @@ ol, ul {
 .game-info li {
   list-style-type: none;
   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.game-info input {
+  display: none;
+}
+
+.game-info label {
+  display: inline-block;
+  padding: 30px;
+  background-image: url('/sort_up.png');
+  background-repeat: no-repeat;
+  border: 1px solid #2a2;
+  border-radius: 5px;
+}
+
+.game-info input:checked+label {
+  background-image: url('/sort_down.png');
+}
+
+.game-info label:hover {
+  animation: 0.4s shadow ease-in-out both;
+}
+
+@keyframes shadow {
+  to {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
 }

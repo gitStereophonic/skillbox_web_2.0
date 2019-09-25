@@ -13,6 +13,25 @@ function Square(props) {
   );
 }
 
+function Sort(props) {
+  return (
+    <div>
+      <input
+        id="sort-trigger"
+        type="checkbox"
+        name="isAsc"
+        checked={props.isAsc}
+        onChange={props.onChangeHandler}
+      >
+      </input>
+      <label
+        className="sort-trigger"
+        for="sort-trigger">
+      </label>
+    </div>
+  );
+}
+
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -65,7 +84,10 @@ class Game extends React.Component {
       }],
       stepNumber: 0,
       xIsNext: true,
+      isAsc: true,
     };
+
+    this.onSortChangeHandler = this.onSortChangeHandler.bind(this);
   }
 
   clearButtons() {
@@ -112,12 +134,19 @@ class Game extends React.Component {
     });
   }
 
+  onSortChangeHandler(event) {
+    const { name, checked } = event.target;
+    this.setState({
+      [name]: checked
+    });
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const moves = history.map((step, move) => {
+    const mvs = history.map((step, move) => {
       const desc = move ?
         [
           <p key='move'>{'Go to move #' + move}</p>,
@@ -136,6 +165,8 @@ class Game extends React.Component {
       );
     });
 
+    const moves = this.state.isAsc ? mvs.slice() : mvs.slice().reverse();
+
     let status;
     if (winner)
       status = 'Winner: ' + winner;
@@ -152,6 +183,9 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div className='status-header'>{status}</div>
+          <Sort
+            onChangeHandler={this.onSortChangeHandler}
+          />
           <ul>{moves}</ul>
         </div>
       </div>
