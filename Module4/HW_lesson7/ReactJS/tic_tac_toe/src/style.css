@@ -1,0 +1,132 @@
+body {
+  font: 44px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  margin-top: 110px;
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.status-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.history-btn {
+  width: 100%;
+  padding: 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #999;
+  color: #ddd;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.history-btn:hover {
+  animation: hover-btn 0.5s ease-in-out both;
+}
+
+.history-btn p {
+  margin: 0;
+}
+
+@keyframes hover-btn {
+  to {
+    opacity: 1;
+  }
+}
+
+.current-btn {
+  background-color: #2a2;
+  font-weight: bold;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 154px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 134px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 134px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.game-board {
+  margin-top: 200px;
+}
+
+.game-info {
+  margin-left: 150px;
+  width: 340px;
+}
+
+.game-info li {
+  list-style-type: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.game-info input {
+  display: none;
+}
+
+.game-info label {
+  display: inline-block;
+  padding: 30px;
+  background-image: url('/sort_up.png');
+  background-repeat: no-repeat;
+  border: 1px solid #2a2;
+  border-radius: 5px;
+}
+
+.game-info input:checked+label {
+  background-image: url('/sort_down.png');
+}
+
+.game-info label:hover {
+  animation: 0.4s shadow ease-in-out both;
+}
+
+@keyframes shadow {
+  to {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.highlight {
+  background-color: rgba(51, 204, 51, 0.6);
+}
