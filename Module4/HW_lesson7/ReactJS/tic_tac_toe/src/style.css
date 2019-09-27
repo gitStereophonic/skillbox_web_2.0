@@ -126,3 +126,7 @@ ol, ul {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
 }
+
+.highlight {
+  background-color: rgba(51, 204, 51, 0.6);
+}

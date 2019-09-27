@@ -36,7 +36,7 @@ class Game extends Component {
     const squares = current.squares.slice();
     const sign = this.state.xIsNext ? 'X' : 'O';
 
-    if (this.props.calculateWinner(squares) || squares[i]) {
+    if (this.props.calculateWinner(squares).winner || squares[i]) {
       return;
     }
 
@@ -77,7 +77,7 @@ class Game extends Component {
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const winner = this.props.calculateWinner(current.squares);
+    const win = this.props.calculateWinner(current.squares);
 
     const mvs = history.map((step, move) => {
       const desc = move ?
@@ -101,8 +101,8 @@ class Game extends Component {
     const moves = this.state.isAsc ? mvs.slice() : mvs.slice().reverse();
 
     let status;
-    if (winner)
-      status = 'Winner: ' + winner;
+    if (win.winner)
+      status = 'Winner: ' + win.winner;
     else
       status = 'Next player is ' + (this.state.xIsNext ? 'X' : 'O');
 
@@ -111,6 +111,7 @@ class Game extends Component {
         <div className="game-board">
           <Board
             squares={current.squares}
+            strike={win.strike}
             onClick={(i) => this.handleClick(i)}
           />
         </div>
@@ -118,6 +119,7 @@ class Game extends Component {
           <div className='status-header'>{status}</div>
           <Sort
             onChangeHandler={this.onSortChangeHandler}
+            isAsc={this.state.isAsc}
           />
           <ul>{moves}</ul>
         </div>

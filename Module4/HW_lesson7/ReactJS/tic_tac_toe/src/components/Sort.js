@@ -13,7 +13,7 @@ function Sort(props) {
       </input>
       <label
         className="sort-trigger"
-        for="sort-trigger">
+        htmlFor="sort-trigger">
       </label>
     </div>
   );

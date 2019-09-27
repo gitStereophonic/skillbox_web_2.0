@@ -3,8 +3,16 @@ import Square from './Square';
 
 class Board extends Component {
   renderSquare(i) {
+    const isHighLighted = this.props.strike.find(o => o === i);
+    let highlight = '';
+
+    if (isHighLighted !== undefined) {
+      highlight = ' highlight ';
+    }
+
     return (
       <Square
+        highlight={highlight}
         key={'square-' + i}
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
