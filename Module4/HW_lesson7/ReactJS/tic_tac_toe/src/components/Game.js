@@ -104,7 +104,17 @@ class Game extends Component {
     if (win.winner)
       status = 'Winner: ' + win.winner;
     else
-      status = 'Next player is ' + (this.state.xIsNext ? 'X' : 'O');
+      if (
+        current.squares.find(o => {
+          if (o === null)
+            return true;
+          else
+            return false;
+        }) === null
+      )
+        status = 'Next player is ' + (this.state.xIsNext ? 'X' : 'O');
+      else
+        status = "Draw";
 
     return (
       <div className="game">
