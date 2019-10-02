@@ -75,6 +75,11 @@ label {
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
 
+.customer-form {
+  padding-top: 20px;
+  border-top: 1px solid rgba(50, 50, 50, 0.3);
+}
+
 /* Button */
 
 .button, button {
