@@ -1,6 +1,8 @@
 "use strict";
 
-Vue.component('product-details', {
+var eventBus = new Vue();
+
+Vue.component("product-details", {
   props: {
     details: {
       type: Array,
@@ -14,7 +16,7 @@ Vue.component('product-details', {
   `
 });
 
-Vue.component('product-review', {
+Vue.component("product-review", {
   template: `
     <form class="review-form" @submit.prevent="onSubmit">
       <p v-if="errors.length">
@@ -80,24 +82,69 @@ Vue.component('product-review', {
           rating: Number(this.rating),
           recomemded: this.recommend
         };
-        this.$emit('review-submitted', productReview);
+        eventBus.$emit("review-submitted", productReview);
 
         this.name = null;
         this.review = null;
         this.rating = null;
         this.recommend = null;
-      }
-      else {
-        if (!this.name) this.errors.push('Name required.');
-        if (!this.rating) this.errors.push('Rating required.');
-        if (!this.review) this.errors.push('Review required.');
-        if (!this.recommend) this.errors.push('Recomendation required.');
+      } else {
+        if (!this.name) this.errors.push("Name required.");
+        if (!this.rating) this.errors.push("Rating required.");
+        if (!this.review) this.errors.push("Review required.");
+        if (!this.recommend) this.errors.push("Recomendation required.");
       }
     }
   }
 });
 
-Vue.component('product', {
+Vue.component("product-tabs", {
+  props: {
+    reviews: {
+      type: Array,
+      required: true
+    }
+  },
+  template: `
+    <div>
+      <span
+        class="tab"
+        v-for="(tab, index) in tabs"
+        :key="index"
+        :class="{ activeTab: selectedTab == tab }"
+        @click="selectedTab = tab"
+      >
+        {{ tab }}
+      </span>
+
+      <div>
+        <div class="reviews" v-show="selectedTab === 'Reviews'">
+          <h2>Reviews</h2>
+          <p v-if="!reviews.length">There are no reviews yet</p>
+          <ul>
+            <li v-for="review in reviews">
+              <p>{{ review.name }}</p>
+              <p>Rating: {{ review.rating }}</p>
+              <p>{{ review.review }}</p>
+            </li>
+          </ul>
+        </div>
+
+        <product-review
+          v-show="selectedTab === 'Make a Review'"
+        ></product-review>
+      </div>
+    </div>
+  `,
+  data() {
+    return {
+      tabs: ["Reviews", "Make a Review"],
+      selectedTab: "Reviews"
+    };
+  }
+});
+
+Vue.component("product", {
   props: {
     premium: {
       type: Boolean,
@@ -136,40 +183,26 @@ Vue.component('product', {
         </button>
       </div>
 
-      <div>
-        <div class="reviews">
-          <h2>Reviews</h2>
-          <p v-if="!reviews.length">There are no reviews yet</p>
-          <ul>
-            <li v-for="review in reviews">
-              <p>{{ review.name }}</p>
-              <p>Rating: {{ review.rating }}</p>
-              <p>{{ review.review }}</p>
-            </li>
-          </ul>
-        </div>
-
-        <product-review @review-submitted="addReview"></product-review>
-      </div>
+      <product-tabs :reviews="reviews"></product-tabs>
     </div>
   `,
   data() {
     return {
-      brand: 'Vue Mastery',
-      product: 'Socks',
+      brand: "Vue Mastery",
+      product: "Socks",
       selectedVariant: 0,
       details: ["80% cotton", "20% polyester", "Gender-neutral"],
       variants: [
         {
           variantId: 2234,
           variantColor: "green",
-          variantImage: './assets/vmSocks-green.jpg',
+          variantImage: "./assets/vmSocks-green.jpg",
           variantQuantity: 10
         },
         {
           variantId: 2235,
           variantColor: "blue",
-          variantImage: './assets/vmSocks-blue.jpg',
+          variantImage: "./assets/vmSocks-blue.jpg",
           variantQuantity: 0
         }
       ],
@@ -178,18 +211,15 @@ Vue.component('product', {
   },
   methods: {
     addToCart() {
-      this.$emit('add-to-cart', this.variants[this.selectedVariant].variantId);
+      this.$emit("add-to-cart", this.variants[this.selectedVariant].variantId);
     },
     updateProduct(index) {
       this.selectedVariant = index;
-    },
-    addReview(productReview) {
-      this.reviews.push(productReview);
     }
   },
   computed: {
     title() {
-      return this.brand + ' ' + this.product;
+      return this.brand + " " + this.product;
     },
     image() {
       return this.variants[this.selectedVariant].variantImage;
@@ -199,15 +229,20 @@ Vue.component('product', {
     },
     shipping() {
       if (this.premium) {
-        return 'Free';
+        return "Free";
       }
-      return '$2.99';
+      return "$2.99";
     }
+  },
+  mounted() {
+    eventBus.$on("review-submitted", productReview => {
+      this.reviews.push(productReview);
+    });
   }
 });
 
 var app = new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     premium: true,
     cart: []
