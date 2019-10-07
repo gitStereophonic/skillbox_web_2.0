@@ -3,3 +3,8 @@
 
 #HW
 *.zip
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
