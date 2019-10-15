@@ -9,12 +9,8 @@ function Sort(props) {
         name="isAsc"
         checked={props.isAsc}
         onChange={props.onChangeHandler}
-      >
-      </input>
-      <label
-        className="sort-trigger"
-        htmlFor="sort-trigger">
-      </label>
+      ></input>
+      <label className="sort-trigger" htmlFor="sort-trigger"></label>
     </div>
   );
 }
