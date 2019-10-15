@@ -168,3 +168,7 @@ h3 {
   width: 224px;
   height: 55px;
 }
+
+.error {
+  border: 1px solid red !important;
+}

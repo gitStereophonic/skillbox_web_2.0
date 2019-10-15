@@ -15,8 +15,12 @@ $(function() {
     const newTaskDescription = $('#new-task-desc').val();
 
     // Проверка непустого заголовка
-    if (newTaskTitle.length === 0) {
-      alert('Нельзя добавить пустое дело!');
+    if (newTaskTitle.length) {
+      $('#new-task-name').removeClass('error');
+      $('#new-task-desc').removeClass('error');
+    } else {
+      $('#new-task-name').addClass('error');
+      $('#new-task-desc').addClass('error');
       return false;
     }
 
