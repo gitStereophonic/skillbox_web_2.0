@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-width: 1000px;
@@ -35,7 +36,8 @@ h3 {
   display: block;
 }
 
-.column-left, .column-right {
+.column-left,
+.column-right {
   width: 470px;
   float: left;
 }
@@ -47,6 +49,7 @@ h3 {
 .empty-list {
   font-size: 16px;
   margin-top: 80px;
+  display: none;
 }
 
 .task-container {

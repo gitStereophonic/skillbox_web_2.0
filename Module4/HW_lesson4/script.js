@@ -1,11 +1,20 @@
 $(function() {
-  // Функция, вставляющая tool tip с информацией о пустом списке дел
-  function addEmptyList() {
-    $('#task-list').append('<p class="tips empty-list">Список пуст...</p>');
-  }
+  const initialState = () => {
+    if (localStorage.getItem('tasks') == null) {
+      $('.empty-list').show();
+    } else {
+      $('.empty-list').hide();
+      $('#task-list').html(localStorage.getItem('tasks'));
+    }
+  };
 
-  // При загрузке страницы список дел пустой
-  addEmptyList();
+  initialState();
+
+  const addToStorage = () => {
+    let content = $('#task-list').html();
+
+    localStorage.setItem('tasks', content);
+  };
 
   // Событие добавления задачи в список дел
   $('#add-task').click(function() {
@@ -26,53 +35,20 @@ $(function() {
 
     // Удаление tool tip'а о пустом списке дел
     if ($('.empty-list')) {
-      $('.empty-list').remove();
+      $('.empty-list').hide();
     }
 
-    // "Кнопка" удаления всего контейнера
-    const closeBtn = $('<button class="close-btn"></button>');
-    closeBtn.click(function() {
-      $(this)
-        .parent()
-        .parent()
-        .remove();
-      // Если удаленный элемент был последний, добавляется
-      // tool tip с пометкой, что список пуст
-      if (!$('.task-container').length) {
-        addEmptyList();
-      }
-    });
-
-    // "Кнопка", скрывающая описание задания
-    const optionsBtn = $('<button class="options-btn"></button>');
-    optionsBtn.click(function() {
-      // Триггер появления/исчезновения описания
-      $(this)
-        .parent()
-        .parent()
-        .children('.task-description')
-        .slideToggle('slow');
-
-      // Поворот стрелки
-      $(this).toggleClass('rotated');
-    });
-
-    // Хедер контейнера задачи. Содержит текст задачи и кнопки
-    // удаления задачи и сворачивания описания
-    const newTaskHeader = $(`
-      <div class="new-task-header clearfix">
-        <h3>${newTaskTitle}</h3>
+    // Контейнер задачи. Содержит хедер и описание
+    const newTaskDiv = $(`
+      <div class="task-container">
+        <div class="new-task-header clearfix">
+          <h3>${newTaskTitle}</h3>
+          <button class="close-btn"></button>
+          <button class="options-btn"></button>
+        </div>
+        <div class="task-description">${newTaskDescription}</div>
       </div>
     `);
-    newTaskHeader.append(closeBtn); // Удаление
-    newTaskHeader.append(optionsBtn); // Сворачивание
-
-    // Контейнер задачи. Содержит хедер и описание
-    const newTaskDiv = $('<div class="task-container"></div>');
-    newTaskDiv.append(newTaskHeader); // Хедер задачи с элементами управления
-    newTaskDiv.append(`
-      <div class="task-description">${newTaskDescription}</div>
-    `); // Описание задачи
 
     // Добавление задачи на страницу
     newTaskDiv.appendTo($('#task-list'));
@@ -81,7 +57,31 @@ $(function() {
     $('#new-task-name').val('');
     $('#new-task-desc').val('');
 
+    addToStorage();
+
     // Предотвращение отправки
     return false;
+  });
+
+  $('body').on('click', '.close-btn', function() {
+    $(this)
+      .parents('.task-container')
+      .remove();
+
+    if (!$('.task-container').length) {
+      $('.empty-list').show();
+      localStorage.removeItem('tasks');
+    }
+
+    addToStorage();
+  });
+
+  $('body').on('click', '.options-btn', function() {
+    $(this)
+      .parents('.task-container')
+      .children('.task-description')
+      .slideToggle('slow');
+
+    $(this).toggleClass('rotated');
   });
 });
