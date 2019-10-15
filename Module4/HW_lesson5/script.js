@@ -5,7 +5,7 @@ $(function() {
       'margin-bottom': '40px'
     })
     .click(function() {
-      let pagePos = $(window).scrollTop();
+      const pagePos = $(window).scrollTop();
 
       $('body')
         .addClass('scroll-off')
@@ -24,7 +24,6 @@ $(function() {
 
   $('#popup-container').click(function(event) {
     if (event.target == this) {
-      let pos = parseInt($('body').attr('data-scroll'), 10);
       $(this).fadeOut(400);
       $('#popup').animate(
         {
