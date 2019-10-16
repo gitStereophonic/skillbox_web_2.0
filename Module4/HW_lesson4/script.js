@@ -1,81 +1,54 @@
-$(function () {
-  // Функция, вставляющая tool tip с информацией о пустом списке дел
-  function addEmptyList() {
-    var emptyList = $('<p></p>');
-    emptyList.text('Список пуст...');
-    emptyList.addClass('tips empty-list');
-    $('#task-list').append(emptyList);
-  }
+$(function() {
+  const initialState = () => {
+    if (localStorage.getItem('tasks') == null) {
+      $('.empty-list').show();
+    } else {
+      $('.empty-list').hide();
+      $('#task-list').html(localStorage.getItem('tasks'));
+    }
+  };
 
-  // При загрузке страницы список дел пустой
-  addEmptyList();
+  initialState();
+
+  const addToStorage = () => {
+    let content = $('#task-list').html();
+
+    localStorage.setItem('tasks', content);
+  };
 
   // Событие добавления задачи в список дел
-  $('#add-task').click(function () {
-
+  $('#add-task').click(function() {
     // Заголовок дела из инпута
-    var newTaskTitle = $('#new-task-name').val();
+    const newTaskTitle = $('#new-task-name').val();
     // Описание дела из инпута
-    var newTaskDescription = $('#new-task-desc').val();
+    const newTaskDescription = $('#new-task-desc').val();
 
     // Проверка непустого заголовка
-    if (newTaskTitle == '') {
+    if (newTaskTitle.length) {
+      $('#new-task-name').removeClass('error');
+      $('#new-task-desc').removeClass('error');
+    } else {
+      $('#new-task-name').addClass('error');
+      $('#new-task-desc').addClass('error');
       return false;
     }
 
     // Удаление tool tip'а о пустом списке дел
     if ($('.empty-list')) {
-      $('.empty-list').remove();
+      $('.empty-list').hide();
     }
 
-    // HTML заголовок с текстом главной цели дела 
-    var newTaskH = $('<h3></h3>');
-    newTaskH.text(newTaskTitle);
-
-    // "Кнопка" удаления всего контейнера
-    var closeBtn = $('<button></button>');
-    closeBtn.addClass('close-btn');
-    closeBtn.click(function () {
-      $(this).parent().parent().remove();
-      // Если удаленный элемент был последний, добавляется 
-      // tool tip с пометкой, что список пуст
-      if (!$('.task-container').length) {
-        addEmptyList();
-      }
-    });
-
-    // "Кнопка", скрывающая описание задания
-    var optionsBtn = $('<button></button>');
-    optionsBtn.addClass('options-btn');
-    optionsBtn.click(function () {
-      // Триггер появления/исчезновения описания
-      $(this).parent().parent().children('.task-description').slideToggle('slow');
-
-      // Поворот стрелки
-      if ($(this).hasClass('rotated'))
-        $(this).removeClass('rotated');
-      else
-        $(this).addClass('rotated');
-    });
-
-    // Хедер контейнера задачи. Содержит текст задачи и кнопки 
-    // удаления задачи и сворачивания описания
-    var newTaskHeader = $('<div></div>');
-    newTaskHeader.addClass('new-task-header clearfix');
-    newTaskHeader.append(newTaskH);   // Текст основной цели
-    newTaskHeader.append(closeBtn);   // Удаление
-    newTaskHeader.append(optionsBtn); // Сворачивание
-
-    // Контейнер с описанием задачи
-    var newTaskDescD = $('<div></div>');
-    newTaskDescD.addClass('task-description');
-    newTaskDescD.text(newTaskDescription);  // Текст описания
-
     // Контейнер задачи. Содержит хедер и описание
-    var newTaskDiv = $('<div></div>');
-    newTaskDiv.addClass('task-container');
-    newTaskDiv.append(newTaskHeader); // Хедер задачи с элементами управления
-    newTaskDiv.append(newTaskDescD);  // Описание задачи
+    const newTaskDiv = $(`
+      <div class="task-container">
+        <div class="new-task-header clearfix">
+          <h3>${newTaskTitle}</h3>
+          <button class="close-btn"></button>
+          <button class="options-btn"></button>
+        </div>
+        <div class="task-description">${newTaskDescription}</div>
+      </div>
+    `);
 
     // Добавление задачи на страницу
     newTaskDiv.appendTo($('#task-list'));
@@ -84,7 +57,31 @@ $(function () {
     $('#new-task-name').val('');
     $('#new-task-desc').val('');
 
+    addToStorage();
+
     // Предотвращение отправки
     return false;
+  });
+
+  $('body').on('click', '.close-btn', function() {
+    $(this)
+      .parents('.task-container')
+      .remove();
+
+    if (!$('.task-container').length) {
+      $('.empty-list').show();
+      localStorage.removeItem('tasks');
+    }
+
+    addToStorage();
+  });
+
+  $('body').on('click', '.options-btn', function() {
+    $(this)
+      .parents('.task-container')
+      .children('.task-description')
+      .slideToggle('slow');
+
+    $(this).toggleClass('rotated');
   });
 });
