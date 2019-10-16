@@ -7,6 +7,12 @@ $(function() {
 
   const url = 'http://data.fixer.io/api/latest?access_key=' + myToken + '&symbols=' + cat;
 
+  const date = new Date();
+
+  $('.money')
+    .find('.news-time')
+    .text(`${date.getHours()}:${date.getMinutes()}`);
+
   $.ajax({
     type: 'GET',
     url: url,
@@ -19,25 +25,9 @@ $(function() {
       const usd_r = rub_e / usd_e;
       const gbp_r = rub_e / gbp_e;
 
-      const date = new Date();
-
-      const finance = $(`
-        <div>
-          <hr>
-          <h2>Курс рубля</h2>
-          <article class="news-item">
-            <h4 class="news-item-text">
-              EUR: ${rub_e.toFixed(2)}, USD: ${usd_r.toFixed(2)}, GBP: ${gbp_r.toFixed(2)}
-            </h4>
-            <div class="news-item-props">
-              <a href="#">/ Экономика</a>
-              <div class="news-time">${date.getHours()} : ${date.getMinutes()}</div>
-            </div>
-          </article>
-        </div>
-      `);
-
-      $('.column-left').append(finance);
+      $('.money')
+        .find('.news-item-text')
+        .text(`EUR: ${rub_e.toFixed(2)}, USD: ${usd_r.toFixed(2)}, GBP: ${gbp_r.toFixed(2)}`);
     }
   });
 });
