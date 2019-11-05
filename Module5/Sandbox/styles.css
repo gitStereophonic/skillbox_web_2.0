@@ -559,3 +559,21 @@ footer {
   display: block;
   color: white;
 }
+
+@media (max-width: 540px) {
+  .datetime {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .black-bar {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  .black-bar {
+    font-size: 12px;
+  }
+}
