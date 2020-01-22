@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Arial;
@@ -36,6 +37,11 @@ footer {
   position: relative;
 }
 
+.top-title {
+  margin: 0;
+  display: inline-block;
+}
+
 .datetime {
   float: right;
 }
@@ -45,7 +51,7 @@ footer {
 }
 
 .clearfix:after {
-  content: '';
+  content: "";
   clear: both;
   display: block;
 }
@@ -53,6 +59,10 @@ footer {
 .left-header {
   float: left;
   margin-top: 40px;
+}
+
+.burger {
+  display: none;
 }
 
 .logo {
@@ -64,7 +74,7 @@ footer {
   margin-left: 59px;
   float: left;
   width: 72px;
-  background-image: url('img/down-arrow.png');
+  background-image: url("img/down-arrow.png");
   background-repeat: no-repeat;
   background-position: right center;
 }
@@ -107,7 +117,7 @@ footer {
   right: 10px;
   width: 30px;
   height: 30px;
-  background-image: url('img/search.png');
+  background-image: url("img/search.png");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -121,7 +131,7 @@ footer {
   margin-top: 14px;
   margin-right: 46px;
   padding-left: 40px;
-  background-image: url('img/cloudy.png');
+  background-image: url("img/cloudy.png");
   background-repeat: no-repeat;
   background-position-y: center;
 }
@@ -160,7 +170,7 @@ footer {
 }
 
 .menu ul li a:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 100%;
@@ -215,7 +225,7 @@ footer {
   display: inline-block;
   margin-left: 0;
   padding-left: 15px;
-  background-image: url('img/icon-time.png');
+  background-image: url("img/icon-time.png");
   background-repeat: no-repeat;
 }
 
@@ -223,7 +233,7 @@ footer {
   display: inline-block;
   margin-left: 20px;
   padding-left: 15px;
-  background-image: url('img/icon-comments.png');
+  background-image: url("img/icon-comments.png");
   background-repeat: no-repeat;
 }
 
@@ -237,7 +247,7 @@ footer {
   margin-top: 0;
   width: 100%;
   height: 322px;
-  background-image: url('img/main-news.png');
+  background-image: url("img/main-news.png");
 }
 
 .main-news-props {
@@ -272,7 +282,7 @@ footer {
 .big-news-time {
   padding-left: 16px;
   display: inline;
-  background-image: url('img/clock.png');
+  background-image: url("img/clock.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -316,7 +326,7 @@ footer {
   padding-top: 20px;
   padding-bottom: 60px;
   background-color: #f9f9f9;
-  background-image: url('img/central-bg-top.png');
+  background-image: url("img/central-bg-top.png");
   background-repeat: repeat-x;
 }
 
@@ -350,7 +360,7 @@ footer {
   float: left;
   height: 394px;
   width: 588px;
-  background-image: url('img/news-special.png');
+  background-image: url("img/news-special.png");
 }
 
 .news-big-special-props {
@@ -358,7 +368,8 @@ footer {
   top: 108px;
 }
 
-.special-big-title, .big-news-description {
+.special-big-title,
+.big-news-description {
   margin-top: 28px;
 }
 
@@ -467,7 +478,7 @@ footer {
 }
 
 .footer-logo {
-  background-image: url('img/logo-min.png');
+  background-image: url("img/logo-min.png");
   background-repeat: no-repeat;
   padding-left: 50px;
   height: 42px;
@@ -521,36 +532,37 @@ footer {
 }
 
 .vk-logo {
-  background-image: url('img/vk.png');
+  background-image: url("img/vk.png");
   background-repeat: no-repeat;
 }
 
 .fb-logo {
-  background-image: url('img/facebook.png');
+  background-image: url("img/facebook.png");
   background-repeat: no-repeat;
 }
 
 .tw-logo {
-  background-image: url('img/twitter.png');
+  background-image: url("img/twitter.png");
   background-repeat: no-repeat;
 }
 
 .it-logo {
-  background-image: url('img/instagram.png');
+  background-image: url("img/instagram.png");
   background-repeat: no-repeat;
 }
 
 .phone {
-  background-image: url('img/phone.png');
+  background-image: url("img/phone.png");
   margin-top: 42px;
 }
 
 .e-mail {
-  background-image: url('img/mail.png');
+  background-image: url("img/mail.png");
   margin-top: 32px;
 }
 
-.phone, .e-mail {
+.phone,
+.e-mail {
   background-repeat: no-repeat;
   background-position-y: center;
   padding-left: 34px;
@@ -564,16 +576,48 @@ footer {
   .datetime {
     display: none;
   }
+
+  .city-container {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    float: left;
+  }
+
+  .burger-topple,
+  .burger-middle,
+  .burger-bottle {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.2s;
+  }
 }
 
 @media (max-width: 400px) {
   .black-bar {
     font-size: 14px;
+    padding: 16px 0 19px;
+  }
+
+  .fixed-container {
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 350px) {
   .black-bar {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .top-title {
+    margin: 0;
+    text-align: center;
+    margin: 0 9px;
+    letter-spacing: -0.28px;
   }
 }
